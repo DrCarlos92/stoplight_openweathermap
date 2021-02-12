@@ -158,7 +158,146 @@ paths:
       summary: weather
       tags:
         - Weather endpoints
-      responses: {}
+      responses:
+        '200':
+          description: OK
+          headers: {}
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  coord:
+                    type: object
+                    properties:
+                      long:
+                        type: number
+                        description: The longitudinal coordinate
+                        example: Example
+                      lat:
+                        type: number
+                        description: The latitudinal coordinate
+                        example: Example
+                  cod:
+                    type: number
+                    description: Coordinate number
+                    example: Example
+                  name:
+                    type: string
+                    description: Name
+                    example: Example
+                  id:
+                    type: number
+                    description: Location ID
+                    example: Example
+                  timezone:
+                    type: number
+                    description: The timezone for the station
+                    example: GMT
+                  sys:
+                    type: object
+                    properties:
+                      type:
+                        type: number
+                        description: Internal Parameter
+                        example: Example
+                      id:
+                        type: number
+                        description: Internal Parameter
+                        example: Example
+                      country:
+                        type: string
+                        description: The country of the request
+                        example: UAE
+                      sunrise:
+                        type: number
+                        description: Time of sunrise
+                        example: Example
+                      sunset:
+                        type: number
+                        description: Time of Sunrise
+                        example: Example
+                  dt:
+                    type: number
+                    description: Example
+                    example: Example
+                  clouds:
+                    type: object
+                    properties:
+                      all:
+                        type: number
+                        description: Cloud coverage
+                        example: Example
+                  wind:
+                    type: object
+                    properties:
+                      speed:
+                        type: number
+                        description: Wind Speed
+                        example: Example
+                      deg:
+                        type: number
+                        description: Wind Direction
+                        example: Example
+                  visibility:
+                    type: number
+                    description: Visibility at horizone level
+                    example: Example
+                  main:
+                    type: object
+                    properties:
+                      temp:
+                        type: number
+                        description: Temperature
+                        example: Example
+                      feels_like:
+                        type: number
+                        description: What the temperature really feels like
+                        example: Example
+                      temp_min:
+                        type: number
+                        description: Minimum temperature
+                        example: Example
+                      temp_max:
+                        type: number
+                        description: Maximum temperature
+                        example: Example
+                      pressure:
+                        type: number
+                        description: Atmospheric pressure
+                        example: Example
+                      humidity:
+                        type: number
+                        description: What the humidity level is
+                        example: Example
+                  weather:
+                    type: array
+                    items:
+                      type: object
+                      properties:
+                        id:
+                          type: number
+                          description: Internal Parameter
+                          example: Example
+                        main:
+                          type: string
+                          description: Internal Parameter
+                          example: Example
+                        description:
+                          type: string
+                          description: What the weathe
+                          example: Example
+                        icon:
+                          type: string
+                          description: Description of wea
+                          example: Example
+              examples:
+                example-1:
+                  value: {}
+            application/xml:
+              schema:
+                type: object
+                properties: {}
       operationId: get-weather
       security:
         - app_id: []
